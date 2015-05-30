@@ -19,8 +19,8 @@
 using namespace std;
 using namespace cv;
 
-#define IMG_ROW 640
-#define IMG_COL 480
+#define IMG_ROW 1280//1920
+#define IMG_COL 720//1080
 #define BLK_SIZE 16
 #define EXT 8
 
@@ -31,8 +31,9 @@ int main()
     
     // Images to capture the frame from video or camera or from file
     Mat curr_frame, prev_frame ;
-
-    //VideoCapture cap("../1.avi"); // open video from file
+    //Mat curr_frame = imread('1.png');//Input from image file
+    //Mat prev_frame = imread('2.png');
+    //VideoCapture cap("1.mp4"); // open video from file
     VideoCapture cap(0); // open the default camera
     
     cap.set(CV_CAP_PROP_FRAME_WIDTH,IMG_ROW);
@@ -46,7 +47,7 @@ int main()
     for(;;)
     {
         // Wait for a while before proceeding to the next frame
-        if( cvWaitKey(10) >= 0 )
+        if( cvWaitKey(1) >= 0 )
             break; 
         cap >> prev_frame; // get a new frame from camera
         cap >> curr_frame; // get a new frame from camera  
@@ -74,8 +75,6 @@ void detection( Mat current, Mat previous)
     cvtColor( previous, B, CV_BGR2GRAY );
     //imshow( "CURR_FRAME_Gray", A );
     //imshow( "PREV_FRAME_Gray", B );   
-
-    //Do Not Touch anything beyond this
 
     int dx[IMG_ROW/BLK_SIZE][IMG_COL/BLK_SIZE],dy[IMG_ROW/BLK_SIZE][IMG_COL/BLK_SIZE],SAD[IMG_ROW/BLK_SIZE][IMG_COL/BLK_SIZE];
     int X;
