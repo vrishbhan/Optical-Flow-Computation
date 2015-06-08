@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Optical-flow-computation by vrishbhan</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Optical-flow-computation</h1>
+        <p>Optical Flow Calculation using corner detection followed by motion estimation </p>
+
+        <p class="view"><a href="https://github.com/vrishbhan/Optical-Flow-Computation">View the Project on GitHub <small>vrishbhan/Optical-Flow-Computation</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/vrishbhan/Optical-Flow-Computation/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/vrishbhan/Optical-Flow-Computation/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/vrishbhan/Optical-Flow-Computation">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="introducing-to-a-unique-approach-to-optical-flow-computation" class="anchor" href="#introducing-to-a-unique-approach-to-optical-flow-computation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introducing to a unique approach to Optical Flow Computation.</h3>
+
+<p>In motion estimation using SAD based block matching algorithm, successive frames of the video are divided into blocks of predetermined sizes and then each block in the current frame is compared to the respective search area in the previous frame to calculate the corresponding block. This is a very compute intensive approach and might provide motion estimation values of background creating ambiguity in the results.</p>
+
+<p>This project gets down to compute the optical flow by integrating FAST ( Features from Accelerated Segment Test ) corner detection algorithm followed by SAD ( Sum of Absolute Differences ) based motion estimation algorithm.
+The FAST corner detection algorithm selecta the areas of interest in the image and Block Matching is then only performed on blocks containing these corner points. This provides us with motion vectors around the object in the foreground and thus reducing the block matching computation.</p>
+
+<h3>
+<a id="environment" class="anchor" href="#environment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Environment</h3>
+
+<p>The algorithm presented has been developed using C++ and OpenCV (ver 2.4.11) on a Mac OS X Yosemite.</p>
+
+<p>If you are using Mac, you can simply install opencv using Homebrew package manager.</p>
+
+<p>To install OpenCV using Homebrew,</p>
+
+<pre><code>$ brew install opencv
+</code></pre>
+
+<p>To check the version of the OpenCV installed, enter</p>
+
+<pre><code>$ brew info opencv
+</code></pre>
+
+<p>To upgade the already existing version of the OpenCV installed, use:</p>
+
+<pre><code>$ brew upgrade opencv
+</code></pre>
+
+<p>PS - You need to install the Command Line Tools for the programs to work. </p>
+
+<h3>
+<a id="try-it-out" class="anchor" href="#try-it-out" aria-hidden="true"><span class="octicon octicon-link"></span></a>Try it Out</h3>
+
+<p>You can download the source and try the code for yourself. And you could also change the parameters like video size, block size for SAD, etc. You can use your webcam for the video input or can provide a video file and check the results.</p>
+
+<h3>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h3>
+
+<p>Vrishbhan Sisodia (<a href="https://github.com/vrishbhan" class="user-mention">@vrishbhan</a>), is a Hardware Design Engineer with a Master's Degree in Electrical Engineering. His specialization include ASIC Design and Verification using SystemVerilog. He is a DIY enthusiast and an avid learner. </p>
+
+<h5>
+<a id="this-project-was-done-as-a-part-of-graduate-program-under-the-valuabe-guidance-of-dr-charles-choo-professor-of-electrical-engineering-at-san-jose-state-university" class="anchor" href="#this-project-was-done-as-a-part-of-graduate-program-under-the-valuabe-guidance-of-dr-charles-choo-professor-of-electrical-engineering-at-san-jose-state-university" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>This project was done as a part of graduate program under the valuabe guidance of Dr. Charles Choo, Professor of Electrical Engineering at San Jose State University.</em>
+</h5>
+
+<p><em>This Page is still under development and I'll add more information over.</em></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/vrishbhan">vrishbhan</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-63905901-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
