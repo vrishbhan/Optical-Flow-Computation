@@ -31,10 +31,10 @@
         <h3>
 <a id="introducing-to-a-unique-approach-to-optical-flow-computation" class="anchor" href="#introducing-to-a-unique-approach-to-optical-flow-computation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introducing to a unique approach to Optical Flow Computation.</h3>
 
-<p>In motion estimation using SAD based block matching algorithm, successive frames of the video are divided into blocks of predetermined sizes and then each block in the current frame is compared to the respective search area in the previous frame to calculate the corresponding block. This is a very compute intensive approach and might provide motion estimation values of background creating ambiguity in the results.</p>
+<p>In motion estimation using SAD based block matching algorithm, successive frames of the video are divided into blocks of predetermined sizes and then each block in the current frame is compared to the respective search area in the previous frame to determine the corresponding block. This is a very compute intensive approach and might provide motion estimation values of background creating ambiguity in the results.</p>
 
 <p>This project gets down to compute the optical flow by integrating FAST ( Features from Accelerated Segment Test ) corner detection algorithm followed by SAD ( Sum of Absolute Differences ) based motion estimation algorithm.
-The FAST corner detection algorithm selects the areas of interest in the image and Block Matching is then only performed on blocks containing these corner points. This provides us with motion vectors around the object in the foreground and thus reducing the block matching computation.</p>
+The FAST corner detection algorithm selecta the areas of interest in the image and Block Matching is then only performed on blocks containing these corner points. This provides us with motion vectors around the object in the foreground and thus reducing the block matching computation.</p>
 
 <h3>
 <a id="environment" class="anchor" href="#environment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Environment</h3>
@@ -74,7 +74,7 @@ The FAST corner detection algorithm selects the areas of interest in the image a
 <a id="this-project-was-done-as-a-part-of-graduate-program-under-the-valuabe-guidance-of-dr-charles-choo-professor-of-electrical-engineering-at-san-jose-state-university" class="anchor" href="#this-project-was-done-as-a-part-of-graduate-program-under-the-valuabe-guidance-of-dr-charles-choo-professor-of-electrical-engineering-at-san-jose-state-university" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>This project was done as a part of graduate program under the valuabe guidance of Dr. Charles Choo, Professor of Electrical Engineering at San Jose State University.</em>
 </h5>
 
-<p><em>This Page is still under development and I'll add more information over.</em></p>
+<p><em>This Page is still under development and I'll add more information over time.</em></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/vrishbhan">vrishbhan</a></p>
